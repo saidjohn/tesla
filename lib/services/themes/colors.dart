@@ -14,6 +14,12 @@ class AppColors {
   static const backgroundlight = Color(0xFFE9EAF0);
   static const lightShadowlight = Color(0xFFFFFFFF);
   static const lightLabellight = Color(0xFF757E95);
+  
+  
+  ///text colors
+  static const textGrey=Color(0xFFEBEBF5);
+  static const textGrey60=Color(0x99EBEBF5);
+  static const textGrey30=Color(0x99EBEBF5);
 
   /// gradient
   static const gradient = [

@@ -25,7 +25,7 @@ class _ClimateScreenState extends State<ClimateScreen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-               Texts.strClimate.tr(),
+               Texts.strKm187.tr(),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
