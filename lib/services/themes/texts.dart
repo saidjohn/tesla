@@ -1,90 +1,97 @@
 import 'package:flutter/material.dart';
+import 'package:tesla/services/themes/text_styles.dart';
+
+import 'colors.dart';
 
 class Texts {
   Texts._();
 
-  static Text strTesla = const Text(
+  static Text strTesla =   Text(
     "str_tesla",
-    style: TextStyle(color: Colors.white),
+    style:AppTextStyles.sfProDisplay28.copyWith(color: AppColors.lightShadowlight),
   );
-  static Text strKm187 = const Text(
+  static Text strKm187 =  Text(
     "str_km187",
-    style: TextStyle(),
+    style: AppTextStyles.sfProDisplay17.copyWith(color: AppColors.textGrey30),
   );
-  static Text strControl = const Text(
+  static Text strControl =  Text(
     "str_control",
-    style: TextStyle(),
+    style: AppTextStyles.sfProDisplay17.copyWith(color: AppColors.textGrey),
   );
-  static Text strClimate = const Text(
+  static Text strClimate =  Text(
     "str_climate",
-    style: TextStyle(color: Colors.white),
+    style: AppTextStyles.sfProDisplay28.copyWith(color: AppColors.lightShadowlight),
   );
-  static Text strLocation = const Text(
+  static Text strClimateBody =  Text(
+    "str_climate",
+    style: AppTextStyles.sfProDisplay17.copyWith(color: AppColors.textGrey60),
+  );
+  static Text strLocation =  Text(
     "str_location",
-    style: TextStyle(),
+    style: AppTextStyles.sfProDisplay20.copyWith(color: AppColors.textGrey60),
   );
-  static Text strSchedule = const Text(
+  static Text strSchedule =  Text(
     "str_schedule",
-    style: TextStyle(),
+    style: AppTextStyles.sfProDisplay20.copyWith(color: AppColors.textGrey60),
   );
-  static Text strInterior20 = const Text(
+  static Text strInterior20 =  Text(
     "str_interior20",
-    style: TextStyle(),
+    style: AppTextStyles.sfProDisplay17.copyWith(color: AppColors.textGrey30),
   );
-  static Text strRue81StChales = const Text(
+  static Text strRue81StChales =  Text(
     "str_rue81StChales",
-    style: TextStyle(),
+    style: AppTextStyles.sfProDisplay17.copyWith(color: AppColors.textGrey30),
   );
-  static Text strC30 = const Text(
+  static Text strC30 =  Text(
     "str_c30",
-    style: TextStyle(),
+    style: AppTextStyles.sfProDisplay28.copyWith(color: AppColors.lightShadowlight),
   );
-  static Text strAc = const Text(
+  static Text strAc =  Text(
     "str_ac",
-    style: TextStyle(),
+    style: AppTextStyles.sfProDisplay17.copyWith(color: AppColors.textGrey60),
   );
-  static Text strFan = const Text(
+  static Text strFan =  Text(
     "str_fan",
-    style: TextStyle(),
+    style: AppTextStyles.sfProDisplay17.copyWith(color: AppColors.textGrey60),
   );
-  static Text strHeat = const Text(
+  static Text strHeat =  Text(
     "str_heat",
-    style: TextStyle(),
+    style: AppTextStyles.sfProDisplay17.copyWith(color: AppColors.textGrey60),
   );
-  static Text strAuto = const Text(
+  static Text strAuto =  Text(
     "str_auto",
-    style: TextStyle(),
+    style: AppTextStyles.sfProDisplay17.copyWith(color: AppColors.textGrey60),
   );
-  static Text strOn = const Text(
+  static Text strOn =  Text(
     "str_on",
-    style: TextStyle(),
+    style: AppTextStyles.sfProDisplay13.copyWith(color: AppColors.lightShadowlight),
   );
-  static Text strVent = const Text(
+  static Text strVent =  Text(
     "str_vent",
-    style: TextStyle(),
+    style: AppTextStyles.sfProDisplay13.copyWith(color: AppColors.textGrey60),
   );
-  static Text strC20 = const Text(
+  static Text strC20 =  Text(
     "str_c20",
-    style: TextStyle(),
+    style: AppTextStyles.sfProDisplay34.copyWith(color: AppColors.lightShadowlight),
   );
-  static Text strCharging = const Text(
+  static Text strCharging =  Text(
     "str_charging",
-    style: TextStyle(),
+    style: AppTextStyles.sfProDisplay20.copyWith(color: AppColors.lightShadowlight),
   );
-  static Text strSetChargeLimit = const Text(
+  static Text strSetChargeLimit =  Text(
     "str_setChargeLimit",
-    style: TextStyle(),
+    style: AppTextStyles.sfProDisplay13.copyWith(color: AppColors.textGrey60),
   );
-  static Text strNearbySuperchargers = const Text(
+  static Text strNearbySuperchargers =  Text(
     "str_nearbySuperchargers",
-    style: TextStyle(),
+    style: AppTextStyles.sfProDisplay20.copyWith(color: AppColors.lightShadowlight),
   );
-  static Text strTeslaSuperchargerMontreal = const Text(
+  static Text strTeslaSuperchargerMontreal =  Text(
     "str_teslaSuperchargerMontreal",
-    style: TextStyle(),
+    style: AppTextStyles.sfProDisplay20.copyWith(color: AppColors.textGrey60),
   );
-  static Text strAvailable2_4 = const Text(
-    "strAvailable2_4",
-    style: TextStyle(),
+  static Text strAvailable2_4 =  Text(
+    "str_available2_4",
+    style:AppTextStyles.sfProDisplay13.copyWith(color: AppColors.textGrey30),
   );
 }
