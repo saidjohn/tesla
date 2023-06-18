@@ -1,5 +1,7 @@
 import 'dart:ui';
 
+import 'package:flutter/material.dart';
+
 class AppColors {
   AppColors._();
 
@@ -40,5 +42,12 @@ class AppColors {
     Color(0xFF2A2D32),
     Color(0xFF161719),
   ];
+
+  // Lock Button color
+  static const lockButtonGradient = [
+    Colors.transparent,
+    Color(0xFF18171C),
+  ];
+
 
 }
