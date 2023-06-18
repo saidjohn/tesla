@@ -1,15 +1,7 @@
-import 'dart:ui';
 
-import 'package:easy_localization/easy_localization.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:neumorphic_ui/neumorphic_ui.dart';
-import 'package:tesla/screens/home_screen.dart';
-import 'package:tesla/services/constants/svg_icon.dart';
-import 'package:tesla/services/themes/colors.dart';
-import 'package:tesla/services/themes/texts.dart';
 import 'dart:ui' as ui;
 
-import '../services/constants/images.dart';
 
 class ChargeScreen extends StatefulWidget {
   const ChargeScreen({super.key});
@@ -120,7 +112,7 @@ class _ChargeScreenState extends State<ChargeScreen> {
 
                 ),
                 CustomPaint(
-                  size: Size(24, 25),
+                  size: const Size(24, 25),
                   painter: RPSCustomPainter(),
                 )
               ],
@@ -210,9 +202,9 @@ class RPSCustomPainter extends CustomPainter {
     path_0.cubicTo(size.width*0.3750896,size.height*0.5581395,size.width*0.3551063,size.height*0.5183674,size.width*0.3720729,size.height*0.4873744);
     path_0.close();
 
-    Paint paint_0_fill = Paint()..style=PaintingStyle.fill;
-    paint_0_fill.shader = ui.Gradient.linear(Offset(size.width*0.5833333,size.height*0.1395349), Offset(size.width*0.5833333,size.height*0.5581395), [Color(0xff2FB8FF).withOpacity(1),Color(0xff9EECD9).withOpacity(1)], [0,1]);
-    canvas.drawPath(path_0,paint_0_fill);
+    Paint paint0Fill = Paint()..style=PaintingStyle.fill;
+    paint0Fill.shader = ui.Gradient.linear(Offset(size.width*0.5833333,size.height*0.1395349), Offset(size.width*0.5833333,size.height*0.5581395), [const Color(0xff2FB8FF).withOpacity(1),const Color(0xff9EECD9).withOpacity(1)], [0,1]);
+    canvas.drawPath(path_0,paint0Fill);
 
   }
 
