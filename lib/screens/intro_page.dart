@@ -1,3 +1,5 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:neumorphic_ui/neumorphic_ui.dart';
 import 'package:tesla/controllers/intro_controller.dart';
 import 'package:tesla/services/constants/images.dart';

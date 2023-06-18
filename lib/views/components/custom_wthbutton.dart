@@ -1,11 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:tesla/views/components/custom_slider.dart';
 
-class NeumorphicWidget4 extends StatelessWidget {
-  final IconData? icon;
+class ControlWidget extends StatelessWidget {
+  final Widget? icon;
   final String title;
 
-  const NeumorphicWidget4({
+  const ControlWidget({
     super.key,
     this.icon,
     required this.title,
@@ -15,6 +16,7 @@ class NeumorphicWidget4 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
+        Spacer(),
         const SizedBox(
           width: 30,
         ),
@@ -60,38 +62,27 @@ class NeumorphicWidget4 extends StatelessWidget {
                   ],
                 ),
               ),
-              child: Icon(
-                icon,
-                size: 25,
-                color: const Color(0xFFEBEBF5).withOpacity(0.6),
-              ),
+              child: icon
             ),
           ),
         ),
         const SizedBox(
           width: 10,
         ),
-        Stack(
+        const Stack(
           alignment: AlignmentDirectional.centerStart,
           children: [
             Column(
               children: [
                 Row(
                   children: [
-                    const SizedBox(
+                    SizedBox(
                       width: 40,
                     ),
-                    Container(
-                      width: 200,
-                      height: 8,
-                      decoration: BoxDecoration(
-                        color: const Color(0xFF151515),
-                        borderRadius: BorderRadius.circular(3),
-                      ),
-                    ),
+                   CustomSlider(),
                   ],
                 ),
-                const SizedBox(
+                SizedBox(
                   height: 9,
                 ),
               ],
@@ -100,7 +91,7 @@ class NeumorphicWidget4 extends StatelessWidget {
           ],
         ),
 
-        ///
+        SizedBox(width: 30,),
       ],
     );
   }
