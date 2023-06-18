@@ -47,7 +47,9 @@ extension ExtSvgPicture on SvgPicture {
       bytesLoader,
       width: newHeight ?? width,
       height: newHeight ?? height,
-      colorFilter:  newColor != null ? ColorFilter.mode(newColor, BlendMode.srcIn) : colorFilter,
+      colorFilter: newColor != null
+          ? ColorFilter.mode(newColor, BlendMode.srcIn)
+          : colorFilter,
     );
   }
 }
