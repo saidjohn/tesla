@@ -61,7 +61,10 @@ class _HomeScreenState extends State<HomeScreen> {
           ],
         ),
         leadingWidth: 140,
-        actions: [CustomButtonAppBar(widget: SvgIcon.person, onPressed: () {})],
+        actions: [Padding(
+          padding: const EdgeInsets.only(right: 22.0),
+          child: CustomButtonAppBar(widget: SvgIcon.person, onPressed: () {}),
+        )],
       ),
       extendBody: true,
       body: SingleChildScrollView(
