@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:neumorphic_ui/neumorphic_ui.dart';
 import 'package:tesla/controllers/intro_controller.dart';
+import 'package:tesla/screens/lock_screen.dart';
 import 'package:tesla/services/constants/images.dart';
 import 'package:tesla/services/constants/svg_icon.dart';
 import 'package:tesla/services/themes/colors.dart';
@@ -9,6 +10,7 @@ import 'package:tesla/services/themes/text_styles.dart';
 import 'package:tesla/views/components/custom_button_app_bar.dart';
 
 class IntroScreen extends StatefulWidget {
+  static const id = "/intro";
   const IntroScreen({super.key});
 
   @override
@@ -63,7 +65,9 @@ class _IntroScreenState extends State<IntroScreen> {
                     alignment: Alignment.center,
                     child: CustomButtonLock(
                       text: "Unlock",
-                      onPress: () {},
+                      onPress: () {
+                        Navigator.pushReplacementNamed(context, LockScreen.id);
+                      },
                     ),
                   ),
                 ),

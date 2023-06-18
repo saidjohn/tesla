@@ -2,6 +2,7 @@ import 'package:tesla/screens/charge_screen.dart';
 import 'package:tesla/screens/climate_screen.dart';
 import 'package:tesla/screens/control_screen.dart';
 import 'package:tesla/screens/home_screen.dart';
+import 'package:tesla/screens/intro_page.dart';
 import 'package:tesla/screens/lock_screen.dart';
 
 class AppRoutes {
@@ -14,5 +15,6 @@ class AppRoutes {
     ControlScreen.id: (context) => const ControlScreen(),
     HomeScreen.id: (context) => const HomeScreen(),
     LockScreen.id: (context) => const LockScreen(),
+    IntroScreen.id: (context) => const IntroScreen(),
   };
 }

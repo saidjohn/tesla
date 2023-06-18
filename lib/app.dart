@@ -5,6 +5,7 @@ import 'package:tesla/screens/control_screen.dart';
 import 'package:tesla/screens/home_screen.dart';
 import 'package:tesla/screens/intro_page.dart';
 import 'package:tesla/screens/lock_screen.dart';
+import 'package:tesla/services/app_routes.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -19,7 +20,8 @@ class App extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
       ),
-      home: const HomeScreen(),
+      routes: AppRoutes.routes,
+      home: const IntroScreen(),
     );
   }
 }

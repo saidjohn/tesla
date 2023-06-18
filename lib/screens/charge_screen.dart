@@ -2,32 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:neumorphic_ui/neumorphic_ui.dart';
 import "dart:ui" as ui;
 
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class ChargeScreen extends StatefulWidget {
+  static const id = "/charge";
+  const ChargeScreen({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(
-        useMaterial3: true,
-      ),
-      home: const HomePage(),
-    );
-  }
+  State<ChargeScreen> createState() => _ChargeScreenState();
 }
 
-class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
-
-  @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
+class _ChargeScreenState extends State<ChargeScreen> {
   int battery = 20;
   double currentValue = 0;
 
