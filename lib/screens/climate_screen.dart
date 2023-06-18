@@ -7,6 +7,7 @@ import 'package:tesla/services/themes/texts.dart';
 import '../services/local_services.dart';
 
 class ClimateScreen extends StatefulWidget {
+  static const id = "/climate";
   const ClimateScreen({super.key});
 
   @override

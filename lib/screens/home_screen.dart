@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:glassmorphism/glassmorphism.dart';
 
 class HomeScreen extends StatelessWidget {
+  static const id = "/home";
+
   const HomeScreen({super.key});
 
   @override
