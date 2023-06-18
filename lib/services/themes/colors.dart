@@ -43,6 +43,13 @@ class AppColors {
     Color(0xFF161719),
   ];
 
+  /// background unlockPageGradient color
+  static const appBarGradient = [
+    Color(0xFF2A2D32),
+    Color(0xFF2A2D32),
+
+  ];
+
   // Lock Button color
   static const lockButtonGradient = [
     Colors.transparent,
