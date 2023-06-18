@@ -26,24 +26,24 @@ class _CustomControlPanelState extends State<CustomControlPanel> {
         borderRadius: BorderRadius.circular(50),
         boxShadow: const [
           BoxShadow(
-            offset: Offset(-18, -18),
+            offset: Offset(-35, -35),
             blurRadius: 20,
             color: Color.fromRGBO(255, 255, 255, .04),
           ),
           BoxShadow(
-            offset: Offset(1, 1),
+            offset: Offset(-45, -55),
             blurRadius: 2,
             color: Color.fromRGBO(0, 0, 0, .02),
           ),
           BoxShadow(
-            offset: Offset(1, 1),
+            offset: Offset(-1, 30),
             blurRadius: 20,
-            color: Color.fromRGBO(0, 0, 0, .25),
+            color: Color.fromRGBO(0, 0, 0, .35),
           ),
           BoxShadow(
-            offset: Offset(1, 1),
+            offset: Offset(-10, -20),
             blurRadius: 16,
-            color: Color(0xFF323232),
+            color: Color(0xFFFFFFF),
           ),
         ],
       ),

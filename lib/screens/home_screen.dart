@@ -38,7 +38,7 @@ class _HomeScreenState extends State<HomeScreen> {
         colors: AppColors.unlockPageGradient,
       ),
       appBar: AppBar(
-        toolbarHeight: lerpDouble(4, 15, 6),
+        toolbarHeight: lerpDouble(4, 17, 6),
         flexibleSpace: Container(
           decoration: const BoxDecoration(
             gradient: LinearGradient(
@@ -53,14 +53,14 @@ class _HomeScreenState extends State<HomeScreen> {
           children: [
             Texts.strTesla.tr(),
             const Padding(
-              padding: EdgeInsets.only(left: 4.0),
+              padding: EdgeInsets.only(left: 30.0),
               child: Image(
                 image: AssetImage("assets/images/km187.png"),
               ),
             )
           ],
         ),
-        leadingWidth: 80,
+        leadingWidth: 140,
         actions: [CustomButtonAppBar(widget: SvgIcon.person, onPressed: () {})],
       ),
       extendBody: true,
@@ -76,7 +76,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 width: MediaQuery.of(context).size.width,
                 decoration: const BoxDecoration(
                     image: DecorationImage(
-                        image: AssetImage("assets/images/img_tesla.png"))),
+                        image: AssetImage("assets/images/img_tesla_grey.png"))),
               ),
               const CustomControlPanel(),
               const SizedBox(
@@ -102,11 +102,11 @@ class _HomeScreenState extends State<HomeScreen> {
                         1,
                       ]),
                   borderGradient: LinearGradient(
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
+                    begin: Alignment.topCenter,
+                    end: Alignment.center,
                     colors: [
-                      const Color(0xFFffffff).withOpacity(0.9),
-                      const Color((0xFFFFFFFF)).withOpacity(0.9),
+                      const Color(0xFFffffff).withOpacity(0.2),
+                      const Color((0xFF282A2F)),
                     ],
                   ),
                   child: Column(
@@ -149,7 +149,6 @@ class _HomeScreenState extends State<HomeScreen> {
                                     ],
                                   ),
                                 ),
-
                               ],
                             ),
                             Padding(
@@ -176,7 +175,6 @@ class _HomeScreenState extends State<HomeScreen> {
                                     ],
                                   ),
                                 ),
-
                               ],
                             ),
                             Padding(
@@ -198,7 +196,6 @@ class _HomeScreenState extends State<HomeScreen> {
                                   padding: const EdgeInsets.all(8.0),
                                   child: Texts.strSchedule.tr(),
                                 ),
-
                               ],
                             ),
                             Padding(
@@ -208,7 +205,131 @@ class _HomeScreenState extends State<HomeScreen> {
                           ],
                         ),
                       ),
-
+                      Padding(
+                        padding: const EdgeInsets.only(top: 40.0, left: 25),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Row(
+                              children: [
+                                SvgIcon.vent,
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Column(
+                                    children: [
+                                      Texts.strClimate.tr(),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(15.0),
+                              child: SvgIcon.chevron_right,
+                            ),
+                          ],
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 40.0, left: 25),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Row(
+                              children: [
+                                SvgIcon.vent,
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Column(
+                                    children: [
+                                      Texts.strClimate.tr(),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(15.0),
+                              child: SvgIcon.chevron_right,
+                            ),
+                          ],
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 40.0, left: 25),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Row(
+                              children: [
+                                SvgIcon.vent,
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Column(
+                                    children: [
+                                      Texts.strClimate.tr(),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(15.0),
+                              child: SvgIcon.chevron_right,
+                            ),
+                          ],
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 40.0, left: 25),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Row(
+                              children: [
+                                SvgIcon.vent,
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Column(
+                                    children: [
+                                      Texts.strClimate.tr(),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(15.0),
+                              child: SvgIcon.chevron_right,
+                            ),
+                          ],
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 40.0, left: 25),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Row(
+                              children: [
+                                SvgIcon.vent,
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Column(
+                                    children: [
+                                      Texts.strClimate.tr(),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(15.0),
+                              child: SvgIcon.chevron_right,
+                            ),
+                          ],
+                        ),
+                      ),
                     ],
                   ),
                 ),
@@ -233,7 +354,7 @@ class _HomeScreenState extends State<HomeScreen> {
         child: ClipPath(
           clipper: MyClipper(),
           child: CustomPaint(
-            size:  Size(MediaQuery.of(context).size.width, 80),
+            size: Size(MediaQuery.of(context).size.width, 80),
             painter: RPSCustomPainter(),
             child: Container(
               height: 80,
@@ -270,7 +391,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
                   const SizedBox(
-                    width: 50,
+                     width: 50,
                   ),
                   GestureDetector(
                     onTap: () {
@@ -317,6 +438,7 @@ class AppIconButtonPressed extends StatelessWidget {
     required this.image,
     required this.onPressed,
   }) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -383,7 +505,6 @@ class BottomBarIcon extends StatelessWidget {
 
   // void Function()? onPressed;
 
-
   BottomBarIcon({
     super.key,
     required this.image,
@@ -401,21 +522,21 @@ class BottomBarIcon extends StatelessWidget {
           children: [
             isActive
                 ? Align(
-              alignment: Alignment.center,
-              child: Container(
-                width: 32,
-                height: 32,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(100),
-                  boxShadow: const [
-                    BoxShadow(
-                      blurRadius: 20,
-                      color: Colors.blue,
-                    )
-                  ],
-                ),
-              ),
-            )
+                    alignment: Alignment.center,
+                    child: Container(
+                      width: 32,
+                      height: 32,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(100),
+                        boxShadow: const [
+                          BoxShadow(
+                            blurRadius: 20,
+                            color: Colors.blue,
+                          )
+                        ],
+                      ),
+                    ),
+                  )
                 : Container(),
             Padding(
               padding: const EdgeInsets.only(left: 6),
@@ -461,7 +582,7 @@ class RPSCustomPainter extends CustomPainter {
     final shadowPaint1 = Paint()
       ..blendMode = BlendMode.overlay
       ..colorFilter =
-      ColorFilter.mode(Colors.white.withOpacity(0.22), BlendMode.overlay)
+          ColorFilter.mode(Colors.white.withOpacity(0.22), BlendMode.overlay)
       ..imageFilter = ImageFilter.blur(
           sigmaX: Shadow.convertRadiusToSigma(3),
           sigmaY: Shadow.convertRadiusToSigma(3));
@@ -473,12 +594,13 @@ class RPSCustomPainter extends CustomPainter {
     // inner shadow
     final shadowPaint2 = Paint()
       ..blendMode = BlendMode.overlay
-      ..colorFilter = const ColorFilter.mode(Colors.white, BlendMode.overlay )
+      ..colorFilter = const ColorFilter.mode(Colors.white, BlendMode.overlay)
       ..imageFilter = ImageFilter.blur(
           sigmaX: Shadow.convertRadiusToSigma(21),
           sigmaY: Shadow.convertRadiusToSigma(21));
     canvas.drawPath(path_0.shift(const Offset(-3, -20)), shadowPaint2);
   }
+
   @override
   bool shouldRepaint(covariant CustomPainter oldDelegate) {
     return true;
