@@ -20,7 +20,7 @@ class Texts {
   );
   static Text strClimate =  Text(
     "str_climate",
-    style: AppTextStyles.sfProDisplay28.copyWith(color: AppColors.lightShadowlight),
+    style: AppTextStyles.sfProDisplay20.copyWith(color: AppColors.lightShadowlight),
   );
   static Text strClimateBody =  Text(
     "str_climate",
@@ -36,11 +36,11 @@ class Texts {
   );
   static Text strInterior20 =  Text(
     "str_interior20",
-    style: AppTextStyles.sfProDisplay17.copyWith(color: AppColors.textGrey30),
+    style: AppTextStyles.sfProDisplay17.copyWith(color: AppColors.textGrey30,fontSize: 12),
   );
   static Text strRue81StChales =  Text(
     "str_rue81StChales",
-    style: AppTextStyles.sfProDisplay17.copyWith(color: AppColors.textGrey30),
+    style: AppTextStyles.sfProDisplay17.copyWith(color: AppColors.textGrey30,fontSize: 12),
   );
   static Text strC30 =  Text(
     "str_c30",
