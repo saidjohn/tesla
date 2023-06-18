@@ -9,7 +9,7 @@ class AppRoutes {
 
 
   static final routes = {
-    ChargeScreen.id: (context) => const ChargeScreen(),
+    // ChargeScreen.id: (context) => const ChargeScreen(),
     ClimateScreen.id: (context) => const ClimateScreen(),
     ControlScreen.id: (context) => const ControlScreen(),
     HomeScreen.id: (context) => const HomeScreen(),
