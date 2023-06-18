@@ -45,8 +45,8 @@ class AppColors {
 
   /// background unlockPageGradient color
   static const appBarGradient = [
-    Color(0xFF2A2D32),
-    Color(0xFF2A2D32),
+    Color(0xFF2A2D31),
+    Color(0xFF282A2F),
 
   ];
 
