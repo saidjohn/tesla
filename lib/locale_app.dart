@@ -12,7 +12,7 @@ class LocaleApp extends StatelessWidget {
     return EasyLocalization(
         supportedLocales: LocalGovernment.supportLocale(),
         path: LocalGovernment.path,
-        startLocale: LocalGovernment.russia.locale,
+        startLocale: LocalGovernment.english.locale,
         child: const App());
   }
 }

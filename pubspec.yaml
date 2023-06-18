@@ -17,6 +17,7 @@ dependencies:
   easy_localization: ^3.0.2
   flutter_svg: ^2.0.7
   neumorphic_ui: ^1.0.0
+  scaffold_gradient_background: ^1.0.3+1
 
 dev_dependencies:
   flutter_test:

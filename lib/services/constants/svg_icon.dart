@@ -39,6 +39,7 @@ sealed class SvgIcon {
   static SvgPicture unlock = SvgPicture.asset("assets/icons/svg_unlock.svg");
   static SvgPicture vent = SvgPicture.asset("assets/icons/svg_vent.svg");
   static SvgPicture wind = SvgPicture.asset("assets/icons/svg_wind.svg");
+  static SvgPicture alarm = SvgPicture.asset("assets/icons/svg_alarm.svg");
   static SvgPicture wind_water =
   SvgPicture.asset("assets/icons/svg_wind_water.svg");
 
