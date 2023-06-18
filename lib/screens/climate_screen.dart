@@ -5,6 +5,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:tesla/services/themes/texts.dart';
 import '../services/local_services.dart';
+import '../views/components/custom_controller_menu.dart';
 
 class ClimateScreen extends StatefulWidget {
   static const id = "/climate";
@@ -62,7 +63,8 @@ class _ClimateScreenState extends State<ClimateScreen> {
                     child: const Text("Uzbek").tr(),
                   ),
                 ],
-              )
+              ),
+              const CustomControlPanel(),
             ],
           ),
         ),
