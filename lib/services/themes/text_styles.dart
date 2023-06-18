@@ -13,7 +13,6 @@ abstract class AppTextStyles {
       fontSize: 40,
       fontWeight: FontWeight.w700,
       );
-
   static const sfProDisplay28 = TextStyle(
       fontFamily: _sfProDisplay,
       fontSize: 28,
