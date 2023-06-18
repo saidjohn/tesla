@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:tesla/services/constants/svg_icon.dart';
 import 'package:tesla/services/themes/colors.dart';
 import 'package:tesla/views/components/custom_wthbutton.dart';
-
 import '../services/themes/texts.dart';
 import '../views/components/circular_slider.dart';
 import '../views/components/custom_appbar_button.dart';
