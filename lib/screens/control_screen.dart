@@ -104,6 +104,7 @@ class _ControlScreenState extends State<ControlScreen> {
                       ),
                       Spacer(),
                       ControlWidget(
+
                         title: "Fan",
                         icon: Center(
                           child: SvgIcon.wind.copyWith(
