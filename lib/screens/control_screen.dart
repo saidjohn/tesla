@@ -13,6 +13,8 @@ import '../views/components/custom_buttombar.dart';
 import '../views/components/custom_button_slider.dart';
 import 'dart:math';
 
+import 'home_screen.dart';
+
 class ControlScreen extends StatefulWidget {
   static const id = "/control";
 
@@ -40,12 +42,17 @@ class _ControlScreenState extends State<ControlScreen> {
                         const EdgeInsets.only(top: 70, left: 36, right: 36),
                     child: Row(
                       children: [
-                        CustomButton(
-                          widget: Center(
-                            child: SvgIcon.chevron_left.copyWith(
-                              newWidth: 13,
-                              newHeight: 22,
-                              newColor: AppColors.textGrey60,
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.pushReplacementNamed(context, HomeScreen.id);
+                          },
+                          child: CustomButton(
+                            widget: Center(
+                              child: SvgIcon.chevron_left.copyWith(
+                                newWidth: 13,
+                                newHeight: 22,
+                                newColor: AppColors.textGrey60,
+                              ),
                             ),
                           ),
                         ),

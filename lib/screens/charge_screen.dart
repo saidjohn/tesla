@@ -4,6 +4,7 @@ import 'dart:ui' as ui;
 
 
 class ChargeScreen extends StatefulWidget {
+  static const id = "/charge";
   const ChargeScreen({super.key});
 
   @override

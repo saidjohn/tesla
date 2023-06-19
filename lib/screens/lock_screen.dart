@@ -2,6 +2,7 @@ import 'package:neumorphic_ui/neumorphic_ui.dart';
 import 'package:tesla/services/constants/svg_icon.dart';
 
 import '../views/components/custom_button.dart';
+import 'home_screen.dart';
 
 class LockScreen extends StatefulWidget {
   static const id = "/lock";
@@ -44,7 +45,9 @@ class _LockScreenState extends State<LockScreen> {
             children: [
               CustomButton(
                 widget: SvgIcon.settings,
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushReplacementNamed(context, HomeScreen.id);
+                },
                 sizeCon1h: 62,
                 sizeCon1w: 62,
                 sizeCon2h: 50,
