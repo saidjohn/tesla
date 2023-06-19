@@ -71,7 +71,7 @@ class _ControlScreenState extends State<ControlScreen> {
                   ),
                 ),
                 Expanded(
-                  flex: 3,
+                  flex: 2,
                   child: Stack(
                     children: [
                       const CustomButtonSlider(),
@@ -138,7 +138,6 @@ class _ControlScreenState extends State<ControlScreen> {
                           ),
                         ),
                       ),
-                      const Spacer(),
                     ],
                   ),
                 ),

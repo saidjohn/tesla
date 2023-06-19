@@ -65,7 +65,7 @@ class _ChargerScreenState extends State<ChargerScreen> {
                   children: [
                     CustomButtonAppBar(
                       widget: SvgIcon.chevron_left
-                          .copyWith(newHeight: 10, newWidth: 10),
+                          .copyWith(newHeight: 18, newWidth: 10),
                       onPressed: () {
                         AppRoutes.popBack(context);
                       },
