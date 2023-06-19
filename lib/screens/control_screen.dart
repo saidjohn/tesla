@@ -1,17 +1,14 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:tesla/services/constants/svg_icon.dart';
 import 'package:tesla/services/themes/colors.dart';
-import 'package:tesla/views/components/custom_slider.dart';
 import 'package:tesla/views/components/custom_wthbutton.dart';
 import '../services/themes/texts.dart';
 import '../views/components/circular_slider.dart';
 import '../views/components/custom_appbar_button.dart';
 import '../views/components/custom_buttombar.dart';
 import '../views/components/custom_button_slider.dart';
-import 'dart:math';
 
 import 'home_screen.dart';
 
@@ -109,7 +106,7 @@ class _ControlScreenState extends State<ControlScreen> {
                           ),
                         ),
                       ),
-                      Spacer(),
+                      const Spacer(),
                       ControlWidget(
 
                         title: "Fan",
@@ -120,7 +117,7 @@ class _ControlScreenState extends State<ControlScreen> {
                           ),
                         ),
                       ),
-                      Spacer(),
+                      const Spacer(),
                       ControlWidget(
                         title: "Heat",
                         icon: Center(
@@ -130,7 +127,7 @@ class _ControlScreenState extends State<ControlScreen> {
                           ),
                         ),
                       ),
-                      Spacer(),
+                      const Spacer(),
                       ControlWidget(
                         title: "Wind",
                         icon: Center(
@@ -140,7 +137,7 @@ class _ControlScreenState extends State<ControlScreen> {
                           ),
                         ),
                       ),
-                      Spacer(),
+                      const Spacer(),
                     ],
                   ),
                 ),

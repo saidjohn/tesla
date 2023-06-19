@@ -23,9 +23,6 @@ class _ControlWidgetState extends State<ControlWidget> {
     return Row(
       children: [
         Spacer(),
-        const SizedBox(
-          width: 10,
-        ),
         Text(
           widget.title,
           style: const TextStyle(
@@ -95,8 +92,7 @@ class _ControlWidgetState extends State<ControlWidget> {
 
           ],
         ),
-
-        const SizedBox(width: 30,),
+        const Spacer(),
       ],
     );
   }

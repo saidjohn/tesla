@@ -1,8 +1,5 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:tesla/screens/climate_screen.dart';
-import 'package:tesla/screens/control_screen.dart';
-import 'package:tesla/screens/home_screen.dart';
 import 'package:tesla/screens/intro_page.dart';
 import 'package:tesla/screens/lock_screen.dart';
 import 'package:tesla/services/app_routes.dart';
