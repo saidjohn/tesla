@@ -1,5 +1,6 @@
 import 'package:neumorphic_ui/neumorphic_ui.dart';
 import 'package:tesla/screens/intro_page.dart';
+import 'package:tesla/services/app_routes.dart';
 import 'package:tesla/services/constants/svg_icon.dart';
 
 import '../views/components/custom_button.dart';
@@ -132,7 +133,9 @@ class _LockScreenState extends State<LockScreen> {
                     CustomButton(
                       widget: Align(
                           alignment: Alignment.center, child: SvgIcon.unlock),
-                      onPressed: () {},
+                      onPressed: () {
+                        AppRoutes.pushIntroScreen(context);
+                      },
                       sizeCon1h: 50,
                       sizeCon1w: 50,
                       sizeCon2h: 44,

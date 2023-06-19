@@ -3,6 +3,8 @@ import 'dart:ui' as ui;
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:neumorphic_ui/neumorphic_ui.dart';
+import 'package:tesla/services/app_routes.dart';
+import 'package:tesla/services/themes/text_styles.dart';
 import '../services/constants/images.dart';
 import '../services/constants/svg_icon.dart';
 import '../services/themes/colors.dart';
@@ -11,7 +13,7 @@ import 'home_screen.dart';
 import 'dart:ui';
 
 class ChargerScreen extends StatefulWidget {
-  static const id = "/chargerScreen";
+  static const id = "/charge";
   const ChargerScreen({Key? key}) : super(key: key);
 
   @override
@@ -24,7 +26,6 @@ class _ChargerScreenState extends State<ChargerScreen> {
   bool setCharge = false;
   double height = 150;
   bool component = false;
-
 
   bool selectedCar = true;
   bool selectedLightning = false;
@@ -58,13 +59,16 @@ class _ChargerScreenState extends State<ChargerScreen> {
           child: SingleChildScrollView(
             child: Column(
               children: [
+                /// Top bar
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     CustomButtonAppBar(
                       widget: SvgIcon.chevron_left
                           .copyWith(newHeight: 10, newWidth: 10),
-                      onPressed: () {},
+                      onPressed: () {
+                        AppRoutes.popBack(context);
+                      },
                     ),
                     Texts.strCharging.tr(),
                     CustomButtonAppBar(
@@ -73,6 +77,8 @@ class _ChargerScreenState extends State<ChargerScreen> {
                     ),
                   ],
                 ),
+
+                /// Image
                 Padding(
                   padding: const EdgeInsets.only(top: 20),
                   child: SizedBox(
@@ -84,52 +90,75 @@ class _ChargerScreenState extends State<ChargerScreen> {
                     ),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 15),
-                  child: SizedBox(
-                    height: 100,
-                    width: 360,
-                    child: Stack(
-                      alignment: Alignment.bottomLeft,
-                      children: [
-                        Stack(
-                          alignment: Alignment.bottomCenter,
+
+                /// Box
+                Stack(
+                  children: [
+                    Align(
+                      alignment: Alignment.center,
+                      child: RichText(
+                          text: TextSpan(children: [
+                            TextSpan(
+                                text: "$battery",
+                                style: const TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 40,
+                                    fontWeight: FontWeight.w600)),
+                            const TextSpan(
+                                text: "%",
+                                style: TextStyle(color: Colors.grey, fontSize: 26)),
+                          ])),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 15),
+                      child: SizedBox(
+                        height: 100,
+                        width: 360,
+                        child: Stack(
+                          alignment: Alignment.bottomLeft,
                           children: [
-                            Container(
-                              height: 125,
-                              width: battery * 3.2,
-                              decoration: const BoxDecoration(
-                                gradient: LinearGradient(
-                                  begin: Alignment.topCenter,
-                                  end: Alignment.bottomCenter,
-                                  colors: [
-                                    Color(0x00ebeefe),
-                                    Color(0x808de1eb),
-                                    Color(0xb28fb6e6),
-                                    Color(0xff5daab3),
-                                  ],
+                            Stack(
+                              alignment: Alignment.bottomCenter,
+                              children: [
+                                Container(
+                                  height: 125,
+                                  width: battery * 3.2,
+                                  decoration: const BoxDecoration(
+                                    gradient: LinearGradient(
+                                      begin: Alignment.topCenter,
+                                      end: Alignment.bottomCenter,
+                                      colors: [
+                                        Color(0x00ebeefe),
+                                        Color(0x808de1eb),
+                                        Color(0xb28fb6e6),
+                                        Color(0xff5daab3),
+                                      ],
+                                    ),
+                                  ),
                                 ),
+                              ],
+                            ),
+                            CustomPaint(
+                              painter: BatteryIndicator(
+                                sizeX: 320,
+                                sizeY: 60,
+                                batteryPercent: battery,
                               ),
+                              size: const Size(270, 50),
                             ),
                           ],
                         ),
-                        CustomPaint(
-                          painter: BatteryIndicator(
-                            sizeX: 320,
-                            sizeY: 60,
-                            batteryPercent: battery,
-                          ),
-                          size: const Size(270, 50),
-                        ),
-                      ],
+                      ),
                     ),
-                  ),
+                  ],
                 ),
                 const SizedBox(height: 20),
+
+                /// Text: 70% - 100%
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 40),
+                  padding: const EdgeInsets.symmetric(horizontal: 10),
                   child: SizedBox(
-                    width: double.infinity,
+                    width: MediaQuery.of(context).size.width,
                     height: 30,
                     child: Column(
                       children: [
@@ -154,15 +183,21 @@ class _ChargerScreenState extends State<ChargerScreen> {
                         const Row(
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
-                            Text("70%", style: TextStyle(
-                              color: Colors.white,
-                            ),),
+                            Text(
+                              "70%",
+                              style: TextStyle(
+                                color: Colors.white,
+                              ),
+                            ),
                             SizedBox(
                               width: 50,
                             ),
-                            Text("100%", style: TextStyle(
-                              color: Colors.white,
-                            ),),
+                            Text(
+                              "100%",
+                              style: TextStyle(
+                                color: Colors.white,
+                              ),
+                            ),
                           ],
                         ),
                       ],
@@ -170,14 +205,16 @@ class _ChargerScreenState extends State<ChargerScreen> {
                   ),
                 ),
                 const SizedBox(height: 10),
+
+                /// Slider
                 Container(
                   width: 400,
-                  height: 100,
+                  height: 30,
                   padding: const EdgeInsets.only(left: 10),
                   child: Stack(
                     children: [
                       Align(
-                        alignment: const Alignment(-.7, -1),
+                        alignment: const Alignment(-.75, -1),
                         child: SizedBox(
                           height: 20,
                           width: 330,
@@ -196,13 +233,31 @@ class _ChargerScreenState extends State<ChargerScreen> {
                         ),
                       ),
                       GestureDetector(
-                        onTap: () {
+                        onTap: () async {
                           setCharge = !setCharge;
+                          if (setCharge) {
+                            for (int i = 1; i <= 30; i++) {
+                              await Future.delayed(
+                                  const Duration(milliseconds: 14), () {
+                                battery++;
+                                setState(() {});
+                              });
+                            }
+                          } else {
+                            for (int i = 1; i <= 30; i++) {
+                              await Future.delayed(
+                                  const Duration(milliseconds: 14), () {
+                                --battery;
+                                setState(() {});
+                              });
+                            }
+                          }
+                          // battery == 70 ? battery = 100 : battery = 70;
                           setState(() {});
                         },
                         child: AnimatedAlign(
                           duration: const Duration(seconds: 1),
-                          alignment: Alignment(setCharge ? 0.83 : 0.33, -1),
+                          alignment: Alignment(setCharge ? 0.95 : 0.45, -1),
                           child: Transform.scale(
                             scale: 2,
                             child: CustomPaint(
@@ -216,70 +271,77 @@ class _ChargerScreenState extends State<ChargerScreen> {
                   ),
                 ),
 
+                /// Text: Set Charge Limit
+                Text(
+                  "Set Charge Limit".tr(),
+                  style: AppTextStyles.sfProDisplay13
+                      .copyWith(color: Colors.grey),
+                ),
+                const SizedBox(height: 100),
 
                 /// Messenger
-                Padding(
-                  padding: const EdgeInsets.only(left: 0, right: 0),
-                  child: AnimatedContainer(
-                    height: height,
-                    width: MediaQuery.of(context).size.width,
-                    duration: const Duration(milliseconds: 250),
-                    child: Neumorphic(
-                      style: NeumorphicStyle(
-                        boxShape:
-                        NeumorphicBoxShape.roundRect(BorderRadius.circular(40)),
-                        depth: -10,
-                        color: const Color(0xFF202122),
-                        shadowDarkColorEmboss: const Color.fromRGBO(0, 0, 0, 0.9),
-                        shadowLightColorEmboss:
-                        const Color.fromRGBO(255, 255, 255, 0.25),
-                      ),
-                      child: Padding(
-                        padding:
-                        const EdgeInsets.only(left: 30, right: 30, top: 40),
-                        child: Column(
-                          children: [
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                const Padding(
-                                  padding: EdgeInsets.only(top: 27),
-                                  child: Text(
-                                    'Nearby Superchargers',
-                                    style: TextStyle(
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.w600,
-                                        color: Color(0xffFFFFFF)),
-                                  ),
-                                ),
-                                CustomButtonAppBar(
-                                    widget: height > 200
-                                        ? const Icon(
-                                      Icons.keyboard_arrow_up,
-                                      size: 35,color: AppColors.textGrey,
-                                    )
-                                        : const Icon(
-                                      Icons.keyboard_arrow_down,
-                                      size: 35,color: AppColors.textGrey,
-                                    ),
-                                    onPressed: func)
-                              ],
-                            ),
-                            (component)
-                                ? const SizedBox(
-                              height: 200,
-                              child: SingleChildScrollView(
-                                child: Column(
-                                  children: [
-                                    Message(),
-                                  ],
+                AnimatedContainer(
+                  height: height,
+                  width: MediaQuery.of(context).size.width,
+                  duration: const Duration(milliseconds: 250),
+                  child: Neumorphic(
+                    style: NeumorphicStyle(
+                      boxShape: NeumorphicBoxShape.roundRect(
+                          BorderRadius.circular(40)),
+                      depth: -10,
+                      color: const Color(0xFF202122),
+                      shadowDarkColorEmboss: const Color.fromRGBO(0, 0, 0, 0.9),
+                      shadowLightColorEmboss:
+                      const Color.fromRGBO(255, 255, 255, 0.25),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 15, vertical: 32),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              const Padding(
+                                padding: EdgeInsets.only(top: 27),
+                                child: Text(
+                                  'Nearby Superchargers',
+                                  style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.w600,
+                                      color: Color(0xffFFFFFF)),
                                 ),
                               ),
-                            )
-                                : const SizedBox(),
-                          ],
-                        ),
+                              CustomButtonAppBar(
+                                  widget: height > 200
+                                      ? const Icon(
+                                    Icons.keyboard_arrow_up,
+                                    size: 35,
+                                    color: AppColors.textGrey,
+                                  )
+                                      : const Icon(
+                                    Icons.keyboard_arrow_down,
+                                    size: 35,
+                                    color: AppColors.textGrey,
+                                  ),
+                                  onPressed: func)
+                            ],
+                          ),
+                          (component)
+                              ? const SizedBox(
+                            height: 200,
+                            child: SingleChildScrollView(
+                              child: Column(
+                                children: [
+                                  Message(),
+                                ],
+                              ),
+                            ),
+                          )
+                              : const SizedBox(),
+                        ],
                       ),
                     ),
                   ),
@@ -377,6 +439,7 @@ class _ChargerScreenState extends State<ChargerScreen> {
     );
   }
 }
+
 class RPSCustomPainterr extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
@@ -467,7 +530,6 @@ Path shapePath(Size size) {
 
   return path_0;
 }
-
 
 class BatteryIndicator extends CustomPainter {
   final double sizeX;
@@ -779,7 +841,6 @@ class Message extends StatelessWidget {
   }
 }
 
-
 class CustomButtonAppBar extends StatelessWidget {
   final void Function()? onPressed;
   final Widget widget;
@@ -896,9 +957,13 @@ class RPSCustomPainter extends CustomPainter {
     Paint paint0Fill = Paint()..style = PaintingStyle.fill;
     paint0Fill.shader = ui.Gradient.linear(
         Offset(size.width * 0.5833333, size.height * 0.1395349),
-        Offset(size.width * 0.5833333, size.height * 0.5581395),
-        [const Color(0xff2FB8FF).withOpacity(1), const Color(0xff9EECD9).withOpacity(1)],
-        [0, 1]);
+        Offset(size.width * 0.5833333, size.height * 0.5581395), [
+      const Color(0xff2FB8FF).withOpacity(1),
+      const Color(0xff9EECD9).withOpacity(1)
+    ], [
+      0,
+      1
+    ]);
     canvas.drawPath(path_0, paint0Fill);
   }
 

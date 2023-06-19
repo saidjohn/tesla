@@ -1,6 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:tesla/services/app_routes.dart';
 import 'package:tesla/services/constants/svg_icon.dart';
 import 'package:tesla/services/themes/colors.dart';
 import 'package:tesla/views/components/custom_wthbutton.dart';
@@ -41,7 +42,7 @@ class _ControlScreenState extends State<ControlScreen> {
                       children: [
                         GestureDetector(
                           onTap: () {
-                            Navigator.pushReplacementNamed(context, HomeScreen.id);
+                            AppRoutes.popBack(context);
                           },
                           child: CustomButton(
                             widget: Center(

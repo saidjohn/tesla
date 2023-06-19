@@ -4,6 +4,7 @@ import 'package:tesla/screens/charge_screen.dart';
 import 'package:tesla/screens/climate_screen.dart';
 import 'package:tesla/screens/control_screen.dart';
 import 'package:tesla/screens/lock_screen.dart';
+import 'package:tesla/services/app_routes.dart';
 import 'package:tesla/services/constants/svg_icon.dart';
 import 'package:tesla/services/themes/colors.dart';
 
@@ -60,7 +61,7 @@ class _CustomControlPanelState extends State<CustomControlPanel> {
             child:  SvgIcon.lock.copyWith(newColor: AppColors.textGrey30),
             onPressed: () {
               setState(() {
-                Navigator.pushReplacementNamed(context, LockScreen.id);
+                AppRoutes.pushReplacementLockScreen(context);
               });
             },
           ),
@@ -69,7 +70,7 @@ class _CustomControlPanelState extends State<CustomControlPanel> {
 
             onPressed: () {
               setState(() {
-                Navigator.pushReplacementNamed(context, ControlScreen.id);
+                AppRoutes.pushClimateScreen(context);
               });
             },
           ),
@@ -77,7 +78,7 @@ class _CustomControlPanelState extends State<CustomControlPanel> {
             child:SvgIcon.charge.copyWith(newColor: Colors.white),
             onPressed: () {
               setState(() {
-                // Navigator.pushReplacementNamed(context, ChargeScreen.id);
+                AppRoutes.pushChargeScreen(context);
               });
             },
           ),
