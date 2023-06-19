@@ -1,5 +1,4 @@
 import 'package:tesla/screens/charge_screen.dart';
-import 'package:tesla/screens/chargescreen.dart';
 import 'package:tesla/screens/climate_screen.dart';
 import 'package:tesla/screens/control_screen.dart';
 import 'package:tesla/screens/home_screen.dart';

@@ -1,12 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:tesla/screens/charge_screen.dart';
-import 'package:tesla/screens/chargescreen.dart';
 import 'package:tesla/screens/climate_screen.dart';
 import 'package:tesla/screens/control_screen.dart';
 import 'package:tesla/screens/lock_screen.dart';
 import 'package:tesla/services/constants/svg_icon.dart';
 import 'package:tesla/services/themes/colors.dart';
+
+import '../../screens/charge_screen.dart';
 
 class CustomControlPanel extends StatefulWidget {
   const CustomControlPanel({super.key});
@@ -56,7 +57,7 @@ class _CustomControlPanelState extends State<CustomControlPanel> {
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           CupertinoButton(
-            child: SvgIcon.lock.copyWith(newColor: AppColors.textGrey30),
+            child:  SvgIcon.lock.copyWith(newColor: AppColors.textGrey30),
             onPressed: () {
               setState(() {
                 Navigator.pushReplacementNamed(context, LockScreen.id);
@@ -65,6 +66,7 @@ class _CustomControlPanelState extends State<CustomControlPanel> {
           ),
           CupertinoButton(
             child: SvgIcon.vent.copyWith(newColor: Colors.white),
+
             onPressed: () {
               setState(() {
                 Navigator.pushReplacementNamed(context, ControlScreen.id);
@@ -72,17 +74,19 @@ class _CustomControlPanelState extends State<CustomControlPanel> {
             },
           ),
           CupertinoButton(
-            child: SvgIcon.charge.copyWith(newColor: Colors.white),
+            child:SvgIcon.charge.copyWith(newColor: Colors.white),
             onPressed: () {
               setState(() {
-                Navigator.pushReplacementNamed(context, ChargerScreen.id);
+                // Navigator.pushReplacementNamed(context, ChargeScreen.id);
               });
             },
           ),
           CupertinoButton(
             child: SvgIcon.car_1.copyWith(newColor: Colors.white),
             onPressed: () {
-              setState(() {});
+              setState(() {
+
+              });
             },
           ),
         ],
