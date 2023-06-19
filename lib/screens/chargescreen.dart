@@ -11,7 +11,7 @@ import 'home_screen.dart';
 import 'dart:ui';
 
 class ChargerScreen extends StatefulWidget {
-  static const id = "/chargerScreen";
+  static const id = "/charger";
   const ChargerScreen({Key? key}) : super(key: key);
 
   @override
