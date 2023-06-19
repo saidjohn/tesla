@@ -1,11 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:tesla/screens/charge_screen.dart';
-import 'package:tesla/screens/climate_screen.dart';
 import 'package:tesla/screens/control_screen.dart';
 import 'package:tesla/screens/lock_screen.dart';
 import 'package:tesla/services/constants/svg_icon.dart';
 import 'package:tesla/services/themes/colors.dart';
+
+import '../../screens/charge_screen.dart';
 
 class CustomControlPanel extends StatefulWidget {
   const CustomControlPanel({super.key});
@@ -75,7 +75,7 @@ class _CustomControlPanelState extends State<CustomControlPanel> {
             child:SvgIcon.charge.copyWith(newColor: Colors.white),
             onPressed: () {
               setState(() {
-                // Navigator.pushReplacementNamed(context, ChargeScreen.id);
+                 Navigator.pushReplacementNamed(context, ChargerScreen.id);
               });
             },
           ),
