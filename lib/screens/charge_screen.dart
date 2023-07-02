@@ -541,13 +541,11 @@ class BatteryIndicator extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
-    // Main Box
+    /// Main Box
     double dx = sizeX;
     double dy = sizeY;
     Paint paint2 = Paint()
-      ..color = Colors.blue
-    // ..imageFilter = ImageFilter.blur(sigmaX: Shadow.convertRadiusToSigma(4), sigmaY: Shadow.convertRadiusToSigma(4))
-      ..maskFilter = const MaskFilter.blur(BlurStyle.inner, 0);
+      ..color = Colors.blue..maskFilter = const MaskFilter.blur(BlurStyle.inner, 0);
     paint2.shader = LinearGradient(
       begin: Alignment.topCenter,
       end: Alignment.bottomCenter,
